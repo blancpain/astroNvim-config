@@ -9,19 +9,29 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
-  { "manzeloth/live-server" },
+  {
+    "manzeloth/live-server",
+    lazy = false,
+  },
   --makes nvim background transparent
   {
     "xiyaowong/nvim-transparent",
     lazy = false,
   },
   { "rebelot/kanagawa.nvim" },
-  { "fedepujol/move.nvim" }, --for moving selected code and auto-indenting
-  { "mattn/emmet-vim" }, --emmet support
+  {
+    "fedepujol/move.nvim",
+    lazy = false,
+  }, --for moving selected code and auto-indenting
+  {
+    "mattn/emmet-vim",
+    lazy = false,
+  }, --emmet support
   --nvim-surround, specs as per docs
   {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    lazt = false,
     event = "VeryLazy",
     config = function()
       require("nvim-surround").setup {
