@@ -24,12 +24,20 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
     -- MY MAPPINGS BELOW
-
+    -- Jump between tabs as per config
+    L = {
+      function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+      desc = "Next buffer",
+    },
+    H = {
+      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+      desc = "Previous buffer",
+    },
     -- start/stop live server
     ["<leader>lsa"] = { "<cmd>LiveServer start<cr>", desc = "Start live server" }, -- start
-    ["<leader>lso"] = { "<cmd>LiveServer stop<cr>", desc = "Stop live server" }, -- start
+    ["<leader>lso"] = { "<cmd>LiveServer stop<cr>", desc = "Stop live server" },   -- start
     -- close split
-    ["<leader>cs"] = { ":close<cr>", desc = "Close split" }, --close split
+    ["<leader>cs"] = { ":close<cr>", desc = "Close split" },                       --close split
     -- cursor stays in place when using J and during page jumps and search terms
     ["J"] = { "mzj`z" },
     ["<C-d>"] = { "<C-d>zz" },
