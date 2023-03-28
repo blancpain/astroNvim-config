@@ -18,7 +18,9 @@ return {
     "xiyaowong/nvim-transparent",
     lazy = false,
   },
+  --themes
   { "rebelot/kanagawa.nvim" },
+  { "arturgoms/moonbow.nvim" },
   {
     "fedepujol/move.nvim",
     lazy = false,
