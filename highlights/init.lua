@@ -1,6 +1,8 @@
 return {
   -- this table overrides highlights in all themes
-  -- Normal = { bg = "#000000" },
+  Normal = { bg = "#000000" },
+  CursorLine = { bg = 0x0f0f0f },
+  -- SignColumn = { bg = "NONE", ctermbg = "NONE", ctermfg = "NONE" },
   -- Add highlight groups in any theme
   NeoTreeNormal = { bg = "NONE", ctermbg = "NONE" },
   NeoTreeNormalNC = { bg = "NONE", ctermbg = "NONE" },
